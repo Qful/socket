@@ -9,13 +9,13 @@ if __name__=="__main__":
 	import socket
 	print "Server is starting"
 	sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	sock.bind(('localhost', 8888))  #配置soket，绑定IP地址和端口号
+	sock.bind(('172.18.250.47', 17799))  #配置soket，绑定IP地址和端口号
 	sock.listen(5) #设置最大允许连接数，各连接和server的通信遵循FIFO原则
-	print "Server is listenting port 8888, with max connection 5" 
+	print "Server is listenting port 17799, with max connection 5" 
 	while True:  #循环轮询socket状态，等待访问
 		connection,address = sock.accept()
 		try:
-			connection.settimeout(50)
+			connection.settimeout(1000)
 			#获得一个连接，然后开始循环处理这个连接发送的信息
 			'''
 			如果server要同时处理多个连接，则下面的语句块应该用多线程来处理，
@@ -28,12 +28,12 @@ if __name__=="__main__":
 			'''
 			while True:
 				buf = connection.recv(1024)
-				print "Get value " +buf
+				print "Get value" +buf
 				if buf == '1':
 					print "send welcome"
 					connection.send('welcome to server!')
 				elif buf!='0':
-					connection.send('please go out!')
+					connection.send('XXX'.encode())
 					print "send refuse"
 				else:
 					print "close"
