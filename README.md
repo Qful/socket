@@ -18,4 +18,4 @@
 
 2018-10-19: init 
 
-[![sites](qitas/qitas.jpg)](http://www.qitas.cn)
+[![sites](qitas/qitas.png)](http://www.qitas.cn)
