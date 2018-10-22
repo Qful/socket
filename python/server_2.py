@@ -47,8 +47,7 @@ while True:
         sys.exit(1)
 '''
 		
-if __name__=="__main__":
-	import socket
+try: 
 	print "Server is starting"
 	sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	sock.bind(host_addr)  #配置soket，绑定IP地址和端口号
@@ -88,7 +87,9 @@ if __name__=="__main__":
 			print 'time out'
 		print "closing one connection" #当一个连接监听循环退出后，连接可以关掉
 		connection.close()  
-
- 
+		
+except Exception:
+ 	print 'Can't server,try it latter!'
+	sys.exit(1)
 
            
