@@ -6,7 +6,7 @@ import sys
 
 HOST_IP = "182.61.61.133"
 HOST_PORT = 17799
-host_addr = (HOST_IP, HOST_PORT)
+host_addr = ("", HOST_PORT)
 
 print("Starting socket: TCP...")
 #1.create socket object:socket=socket.socket(family,type)
