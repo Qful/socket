@@ -2,8 +2,6 @@
 
 #### qitas@qitas.cn
 
-## [描述](https://github.com/qitas/socket/wiki) 
-
 建立socket通信
 
 #### [C/C++实现](C/) 
@@ -14,8 +12,6 @@
 
 包括简单的测试代码，其中包括python 2和python 3的server及client代码
 
----
+[![sites](http://182.61.61.133/link/resources/head.png)](http://www.qitas.cn) 
 
-### 锻造最美之器
-
-[![sites](qitas/qitas.png)](http://www.qitas.cn)
+## 锻造最美之器
