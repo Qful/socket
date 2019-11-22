@@ -20,8 +20,8 @@ def tcp_server(argv=None):
     socket_tcp.listen(5)
     #4.waite for client:connection,address=socket.accept()
     socket_con, (client_ip, client_port) = socket_tcp.accept()
-    print("Connection accepted from %s." %(client_ip.encode()))
-    socket_con.send("Welcome to TCP server!")
+    print("Connection accepted from %s." %(client_ip))
+    socket_con.send(b"Welcome to TCP server!")
 
     while True:
         try:
