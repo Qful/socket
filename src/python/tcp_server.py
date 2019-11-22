@@ -7,8 +7,8 @@ import sys
 HOST_IP = "182.61.61.133"
 HOST_PORT = 17799
 host_addr = ("", HOST_PORT)
-
-def tcp_server():
+ 
+def tcp_server(argv=None):
     print("Starting socket: TCP server")
     #1.create socket object:socket=socket.socket(family,type)
     socket_tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -34,3 +34,7 @@ def tcp_server():
         except Exception:
             socket_tcp.close()
             sys.exit(1)
+        
+
+if __name__ == "__main__":
+    sys.exit(tcp_server())
