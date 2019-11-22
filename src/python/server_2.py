@@ -52,7 +52,7 @@ try:
 	sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	sock.bind(host_addr)  #配置soket，绑定IP地址和端口号
 	sock.listen(5) #设置最大允许连接数，各连接和server的通信遵循FIFO原则
-	print "Server is listenting port 17799, with max connection 5" 
+	print "Server is listenting port %s, with max connection 5" %HOST_PORT
 	while True:  #循环轮询socket状态，等待访问
 		connection,address = sock.accept()
 		try:
@@ -89,7 +89,7 @@ try:
 		connection.close()  
 		
 except Exception:
- 	print 'Can't server,try it latter!'
+ 	print "Can't server,try it latter!"
 	sys.exit(1)
 
            
